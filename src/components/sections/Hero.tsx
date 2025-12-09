@@ -5,7 +5,7 @@ export function Hero() {
     <Box bg="brand.lightBg" py={{ base: 10, md: 16 }} id="hero">
       <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
         <Box textAlign="center" maxW="2xl" mx="auto" mb={{ base: 4, md: 6 }}>
-          <Heading as="h1" size={{ base: 'xl', md: '2xl' }} color="brand.darkGray" mb={{ base: 2, md: 3 }}>
+          <Heading as="h1" size={{ base: 'xl', md: '2xl' }} color="brand.darkGray" mb={4}>
             Единое аналитическое хранилище данных
           </Heading>
           <Text fontSize={{ base: 'md', md: 'lg' }} color="brand.darkGray" px={{ base: 2, md: 0 }}>

@@ -1,6 +1,6 @@
 import { Box, Container, Flex, Heading, Link, IconButton } from '@chakra-ui/react';
 import { useState } from 'react';
-import { HiMenu, HiX } from 'react-icons/hi';
+import { MdMenu, MdClose } from 'react-icons/md';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,15 +16,8 @@ export function Header() {
           <Heading as="h1" size={{ base: 'md', md: 'lg' }} color="brand.darkGray">
             Project K01
           </Heading>
-          <IconButton
-            aria-label="Toggle menu"
-            display={{ base: 'flex', md: 'none' }}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            variant="ghost"
-            color="brand.darkGray"
-            _hover={{ color: 'brand.darkBlue' }}
-          >
-            {isMenuOpen ? <HiX /> : <HiMenu />}
+          <IconButton aria-label="Toggle menu" display={{ base: 'flex', md: 'none' }} onClick={() => setIsMenuOpen(!isMenuOpen)} variant="ghost" color="brand.darkGray" size="lg">
+            {isMenuOpen ? <MdClose /> : <MdMenu />}
           </IconButton>
           <Flex
             as="nav"
