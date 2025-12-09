@@ -16,7 +16,15 @@ export function Header() {
           <Heading as="h1" size={{ base: 'md', md: 'lg' }} color="brand.darkGray">
             Project K01
           </Heading>
-          <IconButton aria-label="Toggle menu" display={{ base: 'flex', md: 'none' }} onClick={() => setIsMenuOpen(!isMenuOpen)} variant="ghost" color="brand.darkGray" size="lg">
+          <IconButton
+            aria-label="Toggle menu"
+            display={{ base: 'flex', md: 'none' }}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            variant="ghost"
+            color="brand.darkGray"
+            size="lg"
+            _hover={{ backgroundColor: 'transparent' }}
+          >
             {isMenuOpen ? <MdClose /> : <MdMenu />}
           </IconButton>
           <Flex
@@ -29,13 +37,12 @@ export function Header() {
             top={{ base: '100%', md: 'auto' }}
             left={0}
             right={0}
-            bg={{ base: 'rgba(255, 255, 255, 0.95)', md: 'transparent' }}
-            backdropFilter={{ base: 'blur(10px)', md: 'none' }}
+            bg={{ base: 'rgba(255, 255, 255, 0.93)', md: 'transparent' }}
+            backdropFilter={{ base: 'blur(100px)', md: 'none' }}
             borderBottom={{ base: '1px', md: 'none' }}
             borderColor="brand.borderGray"
             py={{ base: 4, md: 0 }}
             px={{ base: 4, md: 0 }}
-            boxShadow={{ base: 'md', md: 'none' }}
           >
             <Link href="#target-audience" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
               Для кого
