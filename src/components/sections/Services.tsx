@@ -4,7 +4,7 @@ import { SlideIn } from '@/components/ui/slide-in';
 
 export function Services() {
   return (
-    <Box py={{ base: 10, md: 16 }} bg="brand.lightBg" id="services">
+    <Box py={{ base: 10, md: 16 }} bg="brand.lightBg" id="services" overflowX="hidden">
       <Container maxW="container.xl" px={{ base: 4, md: 6 }}>
         <Box textAlign="center" mb={{ base: 6, md: 10 }}>
           <Heading as="h2" size={{ base: 'xl', md: '2xl' }} color="brand.darkGray" fontWeight="bold" mb={3}>
