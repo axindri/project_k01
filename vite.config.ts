@@ -5,5 +5,9 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
-  base: process.env.BASE_URL || '/',
+  base: '/project_k01/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
 });
