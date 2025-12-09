@@ -27,39 +27,38 @@ export function Header() {
           >
             {isMenuOpen ? <MdClose /> : <MdMenu />}
           </IconButton>
-          <Flex
-            as="nav"
-            gap={{ base: 2, md: 4 }}
-            align="center"
-            direction={{ base: 'column', md: 'row' }}
-            display={{ base: isMenuOpen ? 'flex' : 'none', md: 'flex' }}
+          <Box
             position={{ base: 'absolute', md: 'static' }}
             top={{ base: '100%', md: 'auto' }}
             left={0}
             right={0}
-            bg={{ base: 'rgba(255, 255, 255, 0.93)', md: 'transparent' }}
-            backdropFilter={{ base: 'blur(100px)', md: 'none' }}
+            mx={{ base: '-16px', md: 0 }}
+            width={{ base: '100%', md: 'auto' }}
+            bg={{ base: 'rgba(255, 255, 255, 0.9)', md: 'transparent' }}
+            backdropFilter={{ base: 'blur(10px)', md: 'none' }}
             borderBottom={{ base: '1px', md: 'none' }}
             borderColor="brand.borderGray"
-            py={{ base: 4, md: 0 }}
-            px={{ base: 4, md: 0 }}
+            zIndex={999}
+            display={{ base: isMenuOpen ? 'block' : 'none', md: 'block' }}
           >
-            <Link href="#target-audience" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
-              Для кого
-            </Link>
-            <Link href="#services" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
-              Услуги
-            </Link>
-            <Link href="#advantages" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
-              Преимущества
-            </Link>
-            <Link href="#why-us" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
-              О нас
-            </Link>
-            <Link href="#contact" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
-              Контакты
-            </Link>
-          </Flex>
+            <Flex as="nav" gap={{ base: 2, md: 4 }} align="center" direction={{ base: 'column', md: 'row' }} py={{ base: 4, md: 0 }} px={{ base: 4, md: 0 }}>
+              <Link href="#target-audience" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
+                Для кого
+              </Link>
+              <Link href="#services" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
+                Услуги
+              </Link>
+              <Link href="#advantages" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
+                Преимущества
+              </Link>
+              <Link href="#why-us" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
+                О нас
+              </Link>
+              <Link href="#contact" onClick={handleLinkClick} color="brand.darkGray" _hover={{ color: 'brand.darkBlue' }} fontSize={{ base: 'md', md: 'md' }}>
+                Контакты
+              </Link>
+            </Flex>
+          </Box>
         </Flex>
       </Container>
     </Box>
